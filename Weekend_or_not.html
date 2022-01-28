@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test whether Date is Weekend or not</title>
+</head>
+<body>
+    <script>
+        var is_weekend =  function(date1){
+    var dt = new Date(date1);
+     
+    if(dt.getDay() == 6 || dt.getDay() == 0)
+       {
+        return "weekend";
+        } 
+}
+
+console.log(is_weekend('Dec 13, 2020'));
+console.log(is_weekend('Feb 26, 2021'));
+console.log(is_weekend('Jan 27, 2022'));
+
+    </script>
+</body>
+</html>

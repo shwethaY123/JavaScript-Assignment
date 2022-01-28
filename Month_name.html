@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month Name</title>
+</head>
+<body><p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var month_name = function(dt){
+    monthlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+      return monthlist[dt.getMonth()];
+    };
+    console.log(month_name(new Date("09/09/2021")));
+    console.log(month_name(new Date("10/13/2022")));
+document.getElementById("demo").innerHTML=(month_name(new Date("09/09/2021")));
+document.getElementById("demo1").innerHTML=(month_name(new Date("10/13/2022")));
+
+    </script>
+</body>
+</html>

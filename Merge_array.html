@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Two Array</title>
+</head>
+<body>
+    <script>
+        function merge(array1, array2) 
+{
+    var result_array = [];
+    var arr = array1.concat(array2);
+    var length = arr.length;
+     var assoc = {};
+     while(length--)
+      {
+         var i = arr[length];
+
+        if(!assoc[i])
+
+        {
+              result_array.unshift(i);
+             assoc[i] = true;
+        }
+
+      }
+            return result_array;
+
+}
+var array1 = [13, 15, 12];
+var array2 = [61, 23, 34];
+console.log(merge(array1, array2));
+
+    </script>
+</body>
+</html>

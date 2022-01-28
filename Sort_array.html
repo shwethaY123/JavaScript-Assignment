@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort the array </title>
+</head>
+<body>
+    <script>
+        var library = [ 
+    {
+        title: '2 States',
+        author: 'Chetan Bhagath',
+        libraryID: 1234
+    },
+    {
+        title: 'Bhagvad gita',
+        author: 'Vyas',
+        libraryID: 4226
+    },
+    {
+        title: 'Celestial Bodie',
+        author: 'Jokha Alharthi',
+        libraryID: 3212
+    }];
+ 
+ var sort_ = function(field_name, reverse, initial){
+ 
+    var key = initial ?
+        function(x)
+              {
+                return initial(x[field_name]);
+              } :
+        function(x) 
+              {
+                return x[field_name];
+              };
+ 
+    reverse = !reverse ? 1 : -1;
+ 
+    return function (x, y) {
+        return x = key(x), y = key(y), reverse * ((x > y) - (y > x));
+      } ;
+ };
+ 
+ 
+ var newobj = library.sort(sort_('libraryID', true, parseInt));
+ 
+ console.log(newobj);
+
+    </script>
+</body>
+</html>
